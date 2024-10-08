@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/card.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
+
+    <audio id="background-audio" loop>
+        <source src="./audio/1-03 Separated Dream.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+      <button id="mute-button" aria-label="Mute/Unmute background audio">
+        <i class="fas fa-volume-up" id="volume-icon"></i>
+      </button>
 </head>
 
 <body>
@@ -27,6 +35,9 @@
                         <div class="section-header-container">
                             <h1 class="section-header-title">Genshin Tools</h1>
                         </div>
+                        <audio>
+
+                        </audio>
                     </header>
                     <hr class="section-header-separator">
                     <div id="calculator-content" class="content">
@@ -162,6 +173,14 @@
             </section>
         </div>
     </div>
+    <video class="video-background" autoplay muted loop>
+        <source src="./video/inazuma-logo-genshin-impact-moewalls-com.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script src="./js/bgm-audio.js"></script>
+
+
 </body>
 <footer>
     Copyright (c) 2024 Crusveder

@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Genshin Impact Tools - Schedule</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="description" content="Genshin Impact Tools - Simple tools for Genshin Impact. - Schedule - A quick reference for resources and which days they are available.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/schedule.css">
+
+    <audio id="background-audio" loop>
+        <source src="./audio/1-03 Separated Dream.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+      <button id="mute-button" aria-label="Mute/Unmute background audio">
+        <i class="fas fa-volume-up" id="volume-icon"></i>
+      </button>
+</head>
+
+<body>
+    <div class="page">
+        <div class="container page-container">
+            <section class="section">
+                <div class="section-container">
+                    <header class="section-header">
+                        <div class="section-header-container">
+                            <span class="home-link" role="button" tabindex="0"><a href="./index.html" role="button">Home</a>&nbsp;<i class="fas fa-arrow-right"></i></span>
+                            <h1 class="section-header-title">Schedule</h1>
+                        </div>
+                    </header>
+                    <hr class="section-header-separator">
+                    <div id="calculator-content" class="content collapse show">
+                        <article class="content-container">
+                            <p>
+                                A quick reference for resources and which days they are available.
+                            </p>
+                            <header class="section-header">
+                                <div class="section-header-container">
+                                    <span class="section-toggle-collapse" role="button" tabindex="0"><a data-bs-toggle="collapse" href="#talent-books" role="button" aria-expanded="true" aria-controls="talent-books">Collapse</a></span>
+                                    <h3 class="section-header-title">Talent Books</h3>
+                                </div>
+                            </header>
+                            <div id="talent-books" class="content collapse show">
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text" id="search-lbl">Search</span>
+                                    <input type="text" id="search-character-talent" class="form-control" placeholder="Search" data-search-target="#talent-books tbody" data-search-item=".searchable" aria-label="Search" aria-describedby="search-lbl">
+                                    <button class="btn btn-danger" type="button" onclick="$('#search-character-talent').val('').change();">Clear</button>
+                                </div>
+                                <article class="content-container">
+                                    <table class="table table-bordered table-striped align-middle bg-light">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 106px;">Days</th>
+                                                <th class="talent-book-col">Materials</th>
+                                                <th>Characters</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="6">
+                                                    Monday/<br>Thursday
+                                                </td>
+                                                <td>
+                                                    <label>Mondstadt</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Freedom"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Freedom"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Freedom"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Freedom,Guide to Freedom,Philosophies of Freedom">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Liyue</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Prosperity"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Prosperity"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Prosperity"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Prosperity,Guide to Prosperity,Philosophies of Prosperity">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Inazuma</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Transience"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Transience"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Transience"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Transience,Guide to Transience,Philosophies of Transience">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Sumeru</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Admonition"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Admonition"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Admonition"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Admonition,Guide to Admonition,Philosophies of Admonition">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Fontaine</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Equity"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Equity"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Equity"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Equity,Guide to Equity,Philosophies of Equity">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Natlan</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Contention"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Contention"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Contention"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Contention,Guide to Contention,Philosophies of Contention">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="6">
+                                                    Tuesday/<br>Friday
+                                                </td>
+                                                <td>
+                                                    <label>Mondstadt</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Resistance"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Resistance"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Resistance"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Resistance,Guide to Resistance,Philosophies of Resistance">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Liyue</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Diligence"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Diligence"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Diligence"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Diligence,Guide to Diligence,Philosophies of Diligence">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Inazuma</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Elegance"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Elegance"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Elegance"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Elegance,Guide to Elegance,Philosophies of Elegance">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Sumeru</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Ingenuity"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Ingenuity"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Ingenuity"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Ingenuity,Guide to Ingenuity,Philosophies of Ingenuity">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Fontaine</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Justice"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Justice"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Justice"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Justice,Guide to Justice,Philosophies of Justice">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Natlan</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Kindling"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Kindling"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Kindling"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Kindling,Guide to Kindling,Philosophies of Kindling">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="6">Wednesday/<br>Saturday
+                                                </td>
+                                                <td>
+                                                    <label>Mondstadt</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Ballad"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Ballad"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Ballad"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Ballad,Guide to Ballad,Philosophies of Ballad">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Liyue</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Gold"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Gold"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Gold"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Gold,Guide to Gold,Philosophies of Gold">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Inazuma</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Light"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Light"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Light"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Light,Guide to Light,Philosophies of Light">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Sumeru</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Praxis"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Praxis"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Praxis"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Praxis,Guide to Praxis,Philosophies of Praxis">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Fontaine</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Order"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Order"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Order"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Order,Guide to Order,Philosophies of Order">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Natlan</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Teachings of Conflict"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Guide to Conflict"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Philosophies of Conflict"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-character-resource="Teachings of Conflict,Guide to Conflict,Philosophies of Conflict">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sunday
+                                                </td>
+                                                <td colspan="2"><b>ALL</b>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </article>
+                            </div>
+
+                            <header class="section-header">
+                                <div class="section-header-container">
+                                    <span class="section-toggle-collapse" role="button" tabindex="0"><a data-bs-toggle="collapse" href="#weapon-materials" role="button" aria-expanded="true" aria-controls="weapon-materials">Collapse</a></span>
+                                    <h3 class="section-header-title">Weapon Materials</h3>
+                                </div>
+                            </header>
+                            <div id="weapon-materials" class="content collapse show">
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text" id="search-lbl">Search</span>
+                                    <input type="text" id="search-weapon" class="form-control" placeholder="Search" data-search-target="#weapon-materials tbody" data-search-item=".searchable" aria-label="Search" aria-describedby="search-lbl">
+                                    <button class="btn btn-danger" type="button" onclick="$('#search-weapon').val('').change();">Clear</button>
+                                </div>
+                                <article class="content-container">
+                                    <table class="table table-bordered table-striped align-middle bg-light">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 106px;">Days</th>
+                                                <th class="weapon-material-col">Materials</th>
+                                                <th>Weapons</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="6">
+                                                    Monday/<br>Thursday
+                                                </td>
+                                                <td>
+                                                    <label>Mondstadt</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Tile of Decarabian's Tower"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Debris of Decarabian's City"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Fragment of Decarabian's Epic"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Scattered Piece of Decarabian's Dream"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Tile of Decarabian's Tower,Debris of Decarabian's City,Fragment of Decarabian's Epic,Scattered Piece of Decarabian's Dream">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Liyue</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Luminous Sands from Guyun"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Lustrous Stone from Guyun"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Relic from Guyun"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Divine Body from Guyun"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Luminous Sands from Guyun,Lustrous Stone from Guyun,Relic from Guyun,Divine Body from Guyun">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Inazuma</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Coral Branch of a Distant Sea"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Jeweled Branch of a Distant Sea"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Jade Branch of a Distant Sea"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Golden Branch of a Distant Sea"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Coral Branch of a Distant Sea,Jeweled Branch of a Distant Sea,Jade Branch of a Distant Sea,Golden Branch of a Distant Sea">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Sumeru</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Copper Talisman of the Forest Dew"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Iron Talisman of the Forest Dew"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Silver Talisman of the Forest Dew"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Golden Talisman of the Forest Dew"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Copper Talisman of the Forest Dew,Iron Talisman of the Forest Dew,Silver Talisman of the Forest Dew,Golden Talisman of the Forest Dew">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Fontaine</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Fragment of an Ancient Chord"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Chapter of an Ancient Chord"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Movement of an Ancient Chord"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Echo of an Ancient Chord"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Fragment of an Ancient Chord,Chapter of an Ancient Chord,Movement of an Ancient Chord,Echo of an Ancient Chord">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Natlan</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Blazing Sacrificial Heart's Terror"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Blazing Sacrificial Heart's Hesitance"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Blazing Sacrificial Heart's Resolve"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Blazing Sacrificial Heart's Splendor"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Blazing Sacrificial Heart's Terror,Blazing Sacrificial Heart's Hesitance,Blazing Sacrificial Heart's Resolve,Blazing Sacrificial Heart's Splendor">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="6">
+                                                    Tuesday/<br>Friday
+                                                </td>
+                                                <td>
+                                                    <label>Mondstadt</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Boreal Wolf's Milk Tooth"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Boreal Wolf's Cracked Tooth"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Boreal Wolf's Broken Fang"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Boreal Wolf's Nostalgia"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Boreal Wolf's Milk Tooth,Boreal Wolf's Cracked Tooth,Boreal Wolf's Broken Fang,Boreal Wolf's Nostalgia">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Liyue</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Mist Veiled Lead Elixir"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Mist Veiled Mercury Elixir"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Mist Veiled Gold Elixir"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Mist Veiled Primo Elixir"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Mist Veiled Lead Elixir,Mist Veiled Mercury Elixir,Mist Veiled Gold Elixir,Mist Veiled Primo Elixir">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Inazuma</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Narukami's Wisdom"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Narukami's Joy"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Narukami's Affection"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Narukami's Valor"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Narukami's Wisdom,Narukami's Joy,Narukami's Affection,Narukami's Valor">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Sumeru</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Oasis Garden's Reminiscence"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Oasis Garden's Kindness"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Oasis Garden's Mourning"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Oasis Garden's Truth"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Oasis Garden's Reminiscence,Oasis Garden's Kindness,Oasis Garden's Mourning,Oasis Garden's Truth">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Fontaine</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Dross of Pure Sacred Dewdrop"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Sublimation of Pure Sacred Dewdrop"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Spring of Pure Sacred Dewdrop"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Essence of Pure Sacred Dewdrop"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Dross of Pure Sacred Dewdrop,Sublimation of Pure Sacred Dewdrop,Spring of Pure Sacred Dewdrop,Essence of Pure Sacred Dewdrop">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Natlan</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Delirious Decadence of the Sacred Lord"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Delirious Desolation of the Sacred Lord"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Delirious Demeanor of the Sacred Lord"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Delirious Divinity of the Sacred Lord"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Delirious Decadence of the Sacred Lord,Delirious Desolation of the Sacred Lord,Delirious Demeanor of the Sacred Lord,Delirious Divinity of the Sacred Lord">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="6">Wednesday/<br>Saturday
+                                                </td>
+                                                <td>
+                                                    <label>Mondstadt</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Fetters of the Dandelion Gladiator"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Chains of the Dandelion Gladiator"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Shackles of the Dandelion Gladiator"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Dream of the Dandelion Gladiator"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Fetters of the Dandelion Gladiator,Chains of the Dandelion Gladiator,Shackles of the Dandelion Gladiator,Dream of the Dandelion Gladiator">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Liyue</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Grain of Aerosiderite"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Piece of Aerosiderite"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Bit of Aerosiderite"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Chunk of Aerosiderite"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Grain of Aerosiderite,Piece of Aerosiderite,Bit of Aerosiderite,Chunk of Aerosiderite">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Inazuma</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Mask of the Wicked Lieutenant"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Mask of the Tiger's Bite"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Mask of the One-Horned"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Mask of the Kijin"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Mask of the Wicked Lieutenant,Mask of the Tiger's Bite,Mask of the One-Horned,Mask of the Kijin">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Sumeru</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Echo of Scorching Might"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Remnant Glow of Scorching Might"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Dream of Scorching Might"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Olden Days of Scorching Might"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Echo of Scorching Might,Remnant Glow of Scorching Might,Dream of Scorching Might,Olden Days of Scorching Might">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Fontaine</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Broken Goblet of the Pristine Sea"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Wine Goblet of the Pristine Sea"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Silver Goblet of the Pristine Sea"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Golden Goblet of the Pristine Sea"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Broken Goblet of the Pristine Sea,Wine Goblet of the Pristine Sea,Silver Goblet of the Pristine Sea,Golden Goblet of the Pristine Sea">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Fontaine</label>
+                                                    <div>
+                                                        <div data-resource-type="resource" data-resource-name="Night-Wind's Mystic Consideration"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Night-Wind's Mystic Premonition"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Night-Wind's Mystic Augury"></div>
+                                                        <div data-resource-type="resource" data-resource-name="Night-Wind's Mystic Revelation"></div>
+                                                    </div>
+                                                </td>
+                                                <td data-weapon-resource="Night-Wind's Mystic Consideration,Night-Wind's Mystic Premonition,Night-Wind's Mystic Augury,Night-Wind's Mystic Revelation">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sunday
+                                                </td>
+                                                <td colspan="2"><b>ALL</b>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </article>
+                            </div>
+
+                            <header class="section-header">
+                                <div class="section-header-container">
+                                    <span class="section-toggle-collapse" role="button" tabindex="0"><a data-bs-toggle="collapse" href="#weekly-boss-material" role="button" aria-expanded="true" aria-controls="weekly-boss-material">Collapse</a></span>
+                                    <h3 class="section-header-title">Weekly Boss Material</h3>
+                                </div>
+                            </header>
+                            <div id="weekly-boss-material" class="content collapse show">
+                                <div class="input-group input-group-sm mb-3">
+                                    <span class="input-group-text" id="search-lbl">Search</span>
+                                    <input type="text" id="search-character-boss" class="form-control" placeholder="Search" data-search-target="#weekly-boss-material tbody" data-search-item=".searchable" aria-label="Search" aria-describedby="search-lbl">
+                                    <button class="btn btn-danger" type="button" onclick="$('#search-character-boss').val('').change();">Clear</button>
+                                </div>
+                                <article class="content-container">
+                                    <table class="table table-bordered table-striped align-middle bg-light">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 106px;">Boss</th>
+                                                <th class="boss-material-col">Materials</th>
+                                                <th>Characters</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Confront_Stormterror" title="Confront Stormterror">
+                                                                <img alt="Dvalin" src="./img/Enemy_Stormterror_Icon.png" width="80" height="80">
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Confront_Stormterror" title="Confront Stormterror">Dvalin</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Dvalin's Plume"></div>
+                                                </td>
+                                                <td data-character-resource="Dvalin's Plume">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Dvalin's Claw"></div>
+                                                </td>
+                                                <td data-character-resource="Dvalin's Claw">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Dvalin's Sigh"></div>
+                                                </td>
+                                                <td data-character-resource="Dvalin's Sigh">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Wolf_of_the_North_Challenge" title="Wolf of the North Challenge">
+                                                                <img alt="Andrius" src="./img/Enemy_Andrius_Icon.png" width="80" height="80" />
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Wolf_of_the_North_Challenge" title="Wolf of the North Challenge">Andrius</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Tail of Boreas"></div>
+                                                </td>
+                                                <td data-character-resource="Tail of Boreas">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Ring of Boreas"></div>
+                                                </td>
+                                                <td data-character-resource="Ring of Boreas">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Spirit Locket of Boreas"></div>
+                                                </td>
+                                                <td data-character-resource="Spirit Locket of Boreas">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Enter_the_Golden_House" title="Enter the Golden House">
+                                                                <img alt="Childe" src="./img/Enemy_Childe_P3_Icon.png" width="80" height="80" />
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Enter_the_Golden_House" title="Enter the Golden House">Childe</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Tusk of Monoceros Caeli"></div>
+                                                </td>
+                                                <td data-character-resource="Tusk of Monoceros Caeli">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Shard of a Foul Legacy"></div>
+                                                </td>
+                                                <td data-character-resource="Shard of a Foul Legacy">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Shadow of the Warrior"></div>
+                                                </td>
+                                                <td data-character-resource="Shadow of the Warrior">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Beneath_the_Dragon-Queller" title="Beneath the Dragon-Queller">
+                                                                <img alt="Azhdaha" src="./img/Enemy_Azhdaha_Icon.png" width="80" height="80">
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Beneath_the_Dragon-Queller" title="Beneath the Dragon-Queller">Azhdaha</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Dragon Lord's Crown"></div>
+                                                </td>
+                                                <td data-character-resource="Dragon Lord's Crown">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Bloodjade Branch"></div>
+                                                </td>
+                                                <td data-character-resource="Bloodjade Branch">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Gilded Scale"></div>
+                                                </td>
+                                                <td data-character-resource="Gilded Scale">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Narukami_Island:_Tenshukaku" title="Narukami Island: Tenshukaku">
+                                                                <img alt="Signora" src="./img/Enemy_Signora_Icon.png" width="80" height="80">
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Narukami_Island:_Tenshukaku" title="Narukami Island: Tenshukaku">Signora</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Molten Moment"></div>
+                                                </td>
+                                                <td data-character-resource="Molten Moment">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Hellfire Butterfly"></div>
+                                                </td>
+                                                <td data-character-resource="Hellfire Butterfly">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Ashen Heart"></div>
+                                                </td>
+                                                <td data-character-resource="Ashen Heart">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/End_of_the_Oneiric_Euthymia" title="End of the Oneiric Euthymia">
+                                                                <img alt="The Shogun" src="./img/Enemy_Magatsu_Mitake_Narukami_no_Mikoto_Icon.png" width="80" height="80">
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/End_of_the_Oneiric_Euthymia" title="End of the Oneiric Euthymia">Magatsu Mitake Narukami no Mikoto</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Mudra of the Malefic General"></div>
+                                                </td>
+                                                <td data-character-resource="Mudra of the Malefic General">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Tears of the Calamitous God"></div>
+                                                </td>
+                                                <td data-character-resource="Tears of the Calamitous God">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="The Meaning of Aeons"></div>
+                                                </td>
+                                                <td data-character-resource="The Meaning of Aeons">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Joururi_Workshop" title="Joururi Workshop">
+                                                                <img alt="Scaramouche" src="./img/Enemy_Everlasting_Lord_of_Arcane_Wisdom_Icon.png" width="80" height="80">
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/Joururi_Workshop" title="Joururi Workshop">Everlasting Lord of Arcane Wisdom</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Puppet Strings"></div>
+                                                </td>
+                                                <td data-character-resource="Puppet Strings">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Mirror of Mushin"></div>
+                                                </td>
+                                                <td data-character-resource="Mirror of Mushin">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Daka's Bell"></div>
+                                                </td>
+                                                <td data-character-resource="Daka's Bell">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/The_Realm_of_Beginnings" title="The Realm of Beginnings">
+                                                                <img alt="Guardian of Apep's Oasis" src="./img/Enemy_Guardian_of_Apep's_Oasis_Icon.png" width="80" height="80">
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/The_Realm_of_Beginnings" title="The Realm of Beginnings">Guardian of Apep's Oasis</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Worldspan Fern"></div>
+                                                </td>
+                                                <td data-character-resource="Worldspan Fern">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Primordial Greenbloom"></div>
+                                                </td>
+                                                <td data-character-resource="Primordial Greenbloom">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Everamber"></div>
+                                                </td>
+                                                <td data-character-resource="Everamber">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/All-Devouring_Narwhal" title="All-Devouring Narwhal">
+                                                                <img alt="All-Devouring Narwhal" src="./img/Enemy_All-Devouring_Narwhal_Icon.png" width="80" height="80">
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/All-Devouring_Narwhal" title="All-Devouring Narwhal">All-Devouring Narwhal</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Lightless Silk String"></div>
+                                                </td>
+                                                <td data-character-resource="Lightless Silk String">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Lightless Eye of the Maelstrom"></div>
+                                                </td>
+                                                <td data-character-resource="Lightless Eye of the Maelstrom">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Lightless Mass"></div>
+                                                </td>
+                                                <td data-character-resource="Lightless Mass">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">
+                                                    <div>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/The_Knave" title="The Knave">
+                                                                <img alt="The Knave" src="./img/Enemy_The_Knave_Icon.png" width="80" height="80">
+                                                            </a>
+                                                        </span>
+                                                        <span>
+                                                            <a href="https://genshin-impact.fandom.com/wiki/The_Knave" title="The Knave">The Knave</a>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Fading Candle"></div>
+                                                </td>
+                                                <td data-character-resource="Fading Candle">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Silken Feather"></div>
+                                                </td>
+                                                <td data-character-resource="Silken Feather">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div data-resource-type="resource" data-resource-name="Denial and Judgment"></div>
+                                                </td>
+                                                <td data-character-resource="Denial and Judgment">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </article>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <video class="video-background" autoplay muted loop>
+        <source src="./video/inazuma-logo-genshin-impact-moewalls-com.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script src="./js/bgm-audio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/schedule.js"></script>
+</body>
+
+</html>

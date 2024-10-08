@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coming Soon: New Feature Alert!</title>
+  <link rel="stylesheet" type="text/css" href="./css/coming-soon.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <audio id="background-audio" loop>
+    <source src="./audio/1-03 Separated Dream.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+  <button id="mute-button" aria-label="Mute/Unmute background audio">
+    <i class="fas fa-volume-up" id="volume-icon"></i>
+  </button>
+
+
+</head>
+<body>
+  <div class="container page-container">
+  <header class="section-header">
+    <div class="section-header-container">
+        <span class="home-link" role="button" tabindex="0"><a href="./index.html" role="button">Home</a>&nbsp;<i class="fas fa-arrow-right"></i></span>
+        <h1 class="section-header-title">BRB</h1>
+    </div>
+</header>
+  <div class="coming-soon">
+    <img src="./img/genshin-impact-logo.png" alt="New Feature Image" class="feature-image">
+    <h2 class="feature-name">Introducing new Tools</h2>
+    <p class="feature-description">Revolutionize your customer support with our new AI-powered Tools.</p>
+    <p> <h1> Launching in </h2><h1 id="timer">1000:00:00</h2> </p>
+    <p>Stay tuned for updates and be the first to experience the future of customer support!</p>
+  </div>
+</div>
+
+  <video class="video-background" autoplay muted loop>
+    <source src="./video/inazuma-logo-genshin-impact-moewalls-com.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+  <script src="./js/coming-soon.js"></script>
+  <script src="./js/bgm-audio.js"></script>
+</body>
+</html>

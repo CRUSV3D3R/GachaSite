@@ -1,0 +1,128 @@
+html,
+/* body {
+    background-image: url(./../img/background_raiden.jpg);
+} */
+
+/* video bg css */
+body {
+    font-family: "Genshin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+    padding-bottom: 55px;
+    color: var(--content-text-color);
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+.card-container {
+    position: relative; /* to create a new stacking context */
+    z-index: 1; /* to ensure it's on top of the video background */
+  }
+  
+th.talent-book-col,
+th.weapon-material-col,
+th.boss-material-col {
+    width: 102px;
+}
+
+@media (min-width: 768px) {
+
+    th.talent-book-col,
+    th.weapon-material-col {
+        width: 180px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    th.talent-book-col {
+        width: 260px;
+    }
+
+    th.weapon-material-col {
+        width: 350px;
+    }
+}
+
+[data-resource-type] {
+    display: inline-block;
+}
+
+
+/* bgm audio button css is here*/
+
+#mute-button {
+    /* Transparent background */
+    background-color: transparent;
+    /* Border radius */
+    border-radius: 50%;
+    /* Button color */
+    color: #c2b1b157;
+    /* Button hover color */
+    transition: none;
+    /* Positioning */
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+    margin: 10px; /* Add a 10px margin around the button */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+ 
+  #mute-button:hover {
+    color: #ffffff;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  #mute-button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Volume icon styles */
+  
+  #volume-icon {
+    font-size: 18px;
+    margin: 10 10px;
+    /* No background color */
+    background-color: transparent  !important;
+    text-shadow: none  !important;
+    box-shadow: none  !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-filter: drop-shadow(none);
+    filter: drop-shadow(none);
+  }
+  
+  .fa-volume-up {
+    color: #ffffff;
+    text-shadow: none  !important;
+    box-shadow: none  !important;
+  }
+  
+  .fa-volume-mute {
+    color: #ffffff;
+    text-shadow: none  !important;
+    box-shadow: none  !important;
+  }
+  
+  .fa-volume-up::before {
+    content: "\f028";
+  }
+  
+  .fa-volume-mute::before {
+    content: "\f026";
+  }

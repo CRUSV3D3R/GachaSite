@@ -1,0 +1,165 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+body {
+  font-family: "Genshin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+  padding-bottom: 55px;
+  color: var(--content-text-color);
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+  /* Coming Soon Container */
+  
+  .coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Feature Image */
+  
+  .feature-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(224, 192, 192, 0.788);
+  }
+  
+  /* Feature Name */
+  
+  .feature-name {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    border: #000000;
+  }
+  
+  /* Feature Description */
+  
+  .feature-description {
+    font-size: 18px;
+    color: #ffffff;
+    border: #000000;
+    margin-bottom: 20px;
+    max-width: 400px;
+  }
+  
+  /* Countdown */
+  
+  .countdown {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border: #000000;
+  }
+  
+  .countdown span {
+    color: #ffffff;
+    border: #000000;
+  }
+  
+  /* Additional Styles */
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+
+
+  /* bgm audio button css is here*/
+
+#mute-button {
+  /* Transparent background */
+  background-color: transparent;
+  /* Border radius */
+  border-radius: 50%;
+  /* Button color */
+  color: #c2b1b157;
+  /* Button hover color */
+  transition: none;
+  /* Positioning */
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 1000;
+  margin: 10px; /* Add a 10px margin around the button */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+#mute-button:hover {
+  color: #ffffff;
+  box-shadow: none;
+  transform: none;
+}
+
+#mute-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Volume icon styles */
+
+#volume-icon {
+  font-size: 18px;
+  margin: 10 10px;
+  /* No background color */
+  background-color: transparent  !important;
+  text-shadow: none  !important;
+  box-shadow: none  !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-filter: drop-shadow(none);
+  filter: drop-shadow(none);
+}
+
+.fa-volume-up {
+  color: #ffffff;
+  text-shadow: none  !important;
+  box-shadow: none  !important;
+}
+
+.fa-volume-mute {
+  color: #ffffff;
+  text-shadow: none  !important;
+  box-shadow: none  !important;
+}
+
+.fa-volume-up::before {
+  content: "\f028";
+}
+
+.fa-volume-mute::before {
+  content: "\f026";
+}
