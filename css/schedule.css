@@ -32,6 +32,25 @@ th.boss-material-col {
     width: 102px;
 }
 
+.bg-light {
+  background-color: #f8f9fa00 !important;
+}
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #ffffff;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.05);
+  --bs-table-active-color: #ffffff;
+  --bs-table-active-bg: rgba(255, 255, 255, 0.1);
+  --bs-table-hover-color: #ffffff;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  vertical-align: top;
+  border-color: #ffffff5b;
+}
 @media (min-width: 768px) {
 
     th.talent-book-col,
