@@ -51,6 +51,26 @@ body {
     box-shadow: none;
 }
 
+.bg-light {
+  background-color: #f8f9fa00 !important;
+  border: #ffffff00;
+}
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #ffffff;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0);
+  --bs-table-active-color: #ffffff;
+  --bs-table-active-bg: rgba(0, 0, 0, 0);
+  --bs-table-hover-color: #ffffff;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0);
+  width: 100%;
+  margin-bottom: 5rem;
+  color: #ffffff;
+  vertical-align: top;
+  border-color: #ffffff52;
+}
 
 /* bgm audio button css is here*/
 
